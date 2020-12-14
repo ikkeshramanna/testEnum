@@ -1,0 +1,41 @@
+{
+  "name": "PersonAddresses",
+  "fields": [
+    {
+      "fieldName": "address",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "zipcode",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "test",
+      "fieldType": "TestType",
+      "fieldValues": "AT_SUPPLEMENTARY_FEEDERS (At Supplementary Feeders),OPPORTUNISTIC_AT_NEST (Opportinistic: at nest),OPPORTUNISTIC_IN_FIELD (Opportunistic: in field),NEST_SITE_EGG_CHECK (Nest site: egg check),NEST_SITE_HATCH_CHECK (Nest site: hatch check)"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "addresses",
+      "relationshipName": "person",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201214081809",
+  "entityTableName": "person_addresses",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Person",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "age",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "personAddresses",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "addresses"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "personDetails",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "details"
+    }
+  ],
+  "changelogDate": "20201214081709",
+  "entityTableName": "person",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
